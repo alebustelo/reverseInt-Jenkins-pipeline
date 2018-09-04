@@ -29,11 +29,15 @@ public:
     }
 };
 
-int main(){
+int main(int argc, char *argv[]){
     Solution *sol = new Solution();
     int num = 0;
-    std::cout << "Type in a number to reverse: ";
-    std::cin >> num;
+    if (argc < 2 ) {
+        std::cout << "Type in a number to reverse: ";
+        std::cin >> num;
+    } else {
+        num = atoi(argv[1]);
+    }
     std::cout << sol->reverse(num) << std::endl;
     delete sol;
     return 0;
