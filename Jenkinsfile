@@ -7,7 +7,9 @@ pipeline {
       }
     }
     stage('take for a spin') {
+      steps {
         sh './reverseInt.o 1234'
+      }
     }
   }
 }
