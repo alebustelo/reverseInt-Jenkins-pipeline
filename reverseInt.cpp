@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 #include <string>
 class Solution {
 public:
