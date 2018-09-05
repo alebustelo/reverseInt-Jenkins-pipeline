@@ -6,5 +6,8 @@ pipeline {
         sh 'g++ -o reverseInt.o reverseInt.cpp'
       }
     }
+    stage('take for a spin') {
+        sh './reverseInt.o 1234'
+    }
   }
 }
