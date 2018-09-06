@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('compile') {
       steps {
-        sh 'g++ -o reverseInt.o reverseInt.cpp'
+        sh 'make'
       }
     }
     stage('take for a spin') {
