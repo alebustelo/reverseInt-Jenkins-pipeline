@@ -5,6 +5,11 @@ pipeline {
       steps {
         sh 'make'
       }
+      post {
+        success {
+          archiveArtifacts artifacts: '*.o', fingerprint: true
+        }
+      }
     }
     stage('take for a spin') {
       steps {
